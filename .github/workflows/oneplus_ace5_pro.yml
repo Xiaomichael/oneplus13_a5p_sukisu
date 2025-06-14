@@ -5,11 +5,7 @@ on:
       KERNEL_SUFFIX:
         description: '内核名称修改(可改中文和emoji)'
         required: true
-        default: '-酷安FutabaWa'
-      KERNEL_TIME:
-       description: "内核构建日期更改(默认为原厂)"
-       required: true
-       default: 'Wed Dec 4 02:11:46 UTC 2024'
+        default: '-xiaoxiaow'
       enable_feature_x:
        description: "是否启用kpm"
        required: false
@@ -273,7 +269,6 @@ jobs:
 
       - name: Build Kernel
         run: |
-          export KBUILD_BUILD_TIMESTAMP="${{ github.event.inputs.KERNEL_TIME }}"
           export PATH="$GITHUB_WORKSPACE/kernel_workspace/kernel_platform/prebuilts/clang/host/linux-x86/clang-r510928/bin:$PATH"
           export PATH="/usr/lib/ccache:$PATH"
           sudo apt install libelf-dev
@@ -299,5 +294,5 @@ jobs:
       - name: Upload AnyKernel3
         uses: actions/upload-artifact@v4
         with:
-         name: SuKiSu_${{ env.KSUVER }}_oneplus_ace5_pro
+         name: SukiSU_${{ env.KSUVER }}_oneplus_ace5_pro
          path: ./AnyKernel3/*
