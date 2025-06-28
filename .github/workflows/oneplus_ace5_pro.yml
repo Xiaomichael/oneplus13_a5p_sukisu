@@ -9,7 +9,7 @@ on:
       KERNEL_TIME:
        description: "内核构建日期更改(默认为原厂)"
        required: true
-       default: 'Wed Dec 4 02:11:46 UTC 2024'
+       default: 'Tue Dec 17 23:36:49 UTC 2024'
       enable_feature_x:
        description: "是否启用kpm"
        required: false
